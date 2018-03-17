@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script src="./js/scripts/noBack.js"></script>
+	
+	<script src="./js/lib/angular.min.js"></script>
+	<script src="./js/lib/ngStorage.min.js"></script>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
+	<script src="./js/lib/jquery.min.js"></script>
+	<script src="./js/lib/bootstrap.min.js"></script>
+	<script src="./js/lib/loader.js"></script>
+	<!-- <script src="./css/lib/bootstrap-select.min.js"></script> -->
+	<link rel="stylesheet" href="./css/custom_style.css">
+	<link rel="stylesheet" href="./css/userMgmt.css">
+	<link rel="stylesheet" href="./css/bootstrap-select.min.css">
+	
+	<script src="./js/lib/angular-sanitize.js"></script> 
+	<script src="./js/lib/angular-route.js"></script>
+	
+	<script src="./js/lib/jquery-ui.min.js"></script>
+	<script src="./js/scripts/eventsHandling.js"></script>
+	
+	<script src="./js/app.js"></script>
+	<script src="./js/userLogin/userLoginController.js"></script>
+	<script src="./js/userLogin/userLoginService.js"></script>
+	<script src="./js/admin/adminHomeController.js"></script>
+	<script src="./js/scoreBoard/ScoreBoardController.js"></script>
+	<script src="./js/scoreBoard/ScoreBoardService.js"></script>
+	
+	
+	<base href="/iapp/">
+</head>
+<title>i Score App</title>
+<body ng-app="iApp" id="mainPageRender" onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="onWindowClose()"
+ style="font-family:'Segoe UI';font-style:normal;font-size:12px;">
+<div id="renderView" ng-view></div>
+
+
+</body>
+</html>

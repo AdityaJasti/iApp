@@ -1,0 +1,24 @@
+.userManagement {
+	border-style: groove;
+	border-width: thin;
+	border-size: 1px;
+	border: 1px solid #333;
+	border-color: lavender;
+	padding: 8px;
+	margin-bottom: 25px;
+	background-color: #f2f2f2;
+}
+
+#saveRoles {
+	float: right !important;
+}
+
+#username, #pswd, #fName, #lName, #email, #removeUserID {
+	border-radius: 0px !important;
+}
+
+button#submit, button#reset {
+	min-width: 6%;
+	border-radius: 0px !important;
+	font-family: "Verdana", Geneva, sans-serif;
+}

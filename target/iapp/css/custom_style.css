@@ -1,0 +1,604 @@
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th,
+	.table>thead>tr>td, .table>thead>tr>th {
+	border-top: 0px;
+	/* text-align: center; */
+	text-transform: capitalize;
+}
+
+body {
+	margin: 0%;
+}
+
+.tab-content {
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	padding: 10px;
+	border-bottom: 1px solid #ddd;
+	height: 10%;;
+}
+
+#rcorners2 {
+	border-radius: 25px;
+	border: 2px solid #73AD21;
+	padding: 20px;
+	width: 200px;
+	height: 150px;
+}
+
+.table {
+	margin-bottom: 0px;
+	/* border: 1px solid grey; */
+}
+
+#config_tab_table, #config_tab_table th, #config_tab_table tr,
+	#config_tab_table td {
+	border: 1px solid grey;
+}
+
+#config_tab_table tr:nth-child(odd) {
+	background-color: #f1f1f1;
+}
+
+#config_tab_table tr:nth-child(even) {
+	background-color: #ffffff;
+}
+
+.modal-body {
+	width: auto;
+	height: auto;
+	overflow-y: auto;
+}
+
+#historicalCapacityDataModal, #fileSystemViewPentaho, #backUpHistoricalDataModal, #dataFilesViewModal, #fileSystemViewModal, #topRAMUtilModal{
+	overflow-x: hidden;
+    overflow-y: hidden;
+    padding-left: 0px; 
+}
+
+.modal-dialog {
+	width: 25%;
+	height: auto;
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	overflow-y: initial !important
+}
+
+#backUpHistPentaho{
+	width: 100%;
+	height: 788px;
+	overflow: visible;
+}
+
+#pentahoView, #fileSystemPentahoHistory{
+	width: 100%;
+    height: 700px;
+    overflow: visible;
+}
+
+#pentahoCapacityTab{
+	width: 100%;
+	height: 643px;
+	overflow: scroll;
+}
+
+/* .modal-content {
+  height: auto;
+  min-height: 100%;
+  border-radius: 0;
+} */
+
+/* .modal-body {
+	width: auto;
+	height: auto;
+	overflow: scroll;
+} */
+/* #go, #reset {
+	width: 40%;
+	margin-left: 60px;
+} */
+
+button#go, button#reset {
+    min-width: 6%;
+    border-radius: 0px !important;
+    font-family: "Verdana", Geneva, sans-serif;
+}
+
+.getFilterButtons {
+	text-align: center;
+    padding-bottom: 8px;
+}
+
+#queryButtons {
+	/* padding-top: 8px;
+    width: 249px;
+    padding-left: 8px; */
+	
+}
+
+.yellowStyle {
+	background-color: #ffff00;
+}
+
+.greenStyle {
+	background-color: #66ff66;
+}
+
+.redStyle {
+	background-color: #ff4d4d;
+}
+
+.orangeStyle {
+	background-color: #ff9900;
+}
+
+#history, #historical_tab, #dbGrowth, #dbGrowth_tab, #historyUp,
+	#dataFilesView, #fileSystemView, #dataFilesView_Tab,
+	#fileSystemView_Tab {
+	padding: 5px;
+	text-align: center;
+	background-color: #e5eecc;
+	border: solid 1px #c3c3c3;
+}
+
+#historical_tab, #dbGrowth_tab, #dataFilesView_Tab, #fileSystemView_Tab
+	{
+	padding: 50px;
+	display: none;
+}
+
+#errorMessageCapacityTab h3, #errorMessageDbInfoResponseData h3,
+	#errorMessageBackUpTabResponse h3,
+	#errorMessageCapacityTabFileSystemView h3, #errorMessageFilterTree h3,{
+	/*background-color: #ff0000;*/
+	color: #ff0000;
+}
+
+#errorMessageCapacityTab h3, #errorMessageDbInfoResponseData h3,
+	#errorMessageBackUpTabResponse h3,
+	#errorMessageCapacityTabFileSystemView h3 {
+	text-align: center;
+}
+
+#filterPanel {
+	/* background: #ccf2ff; */
+	
+}
+
+a:link, a:visited, a:hover, a:active {
+	text-decoration: none;
+}
+
+#mainPageRender, #renderView , #mainPageRender h1 {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	/* background-image: url('../img/cg_logo.jpg'); */
+	/*  background-repeat: no-repeat; */
+}
+
+#tdLable {
+	/* background-color: #d9e6f2; */
+	text-transform: capitalize;
+	text-align: left;
+}
+
+#tdData {
+	text-align: left;
+}
+
+#userContainer {
+	background-color: none;
+}
+
+#treeSearch_display {
+	background: #ffffff;
+	/* overflow-y: scroll; 
+    overflow-x: scroll; */
+	height: 550px;
+	display: block;
+	border: 1px solid #7bc7de;
+}
+
+#displayTabsContent>ul>li {
+	min-width: 8%;
+    border: 1px solid #004d8c;
+    border-top-right-radius: 12px;
+    text-align: center;
+    font-family: "Verdana", Geneva, sans-serif;
+}
+
+#displayTabsContent>ul>li>a {
+    margin-right: 0px;
+    border-top-right-radius: 10px;
+    /* font-family:"Helvetica Neue", Helvetica, Arial, sans-serif; */
+    font-family: "Verdana", Geneva, sans-serif;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover
+	{
+	background: #004d8c;
+	color: #ffffff;
+	/* text-transform: capitalize; */
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a
+	{
+	font-weight: bold;
+}
+
+.pull-right {
+	float: right !important;
+}
+
+.pull-left {
+	float: left !important;
+}
+
+.pull-left img {
+	width: 50%;
+	height: 50%;
+	margin-top: -1px;
+	margin-left: -2px;
+}
+
+ul, li {
+	list-style-type: none;
+}
+
+/* a:hover {
+	background-color: #808080;
+} */
+#userWelcome h3, #filterLabel, #go, #reset, #serReq {
+	/* font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif; */
+	font-family: "Verdana", Geneva, sans-serif;
+	text-transform: capitalize;
+	color: #ffffff;
+}
+
+#userWelcome h3, #go, #reset, #serReq {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+#serReq, #showDataFiles, #showFileSystem, #showDataFiles_Modal, #showPentaho_Modal, #backUpHistoricalData  {
+	border-radius: 0px !important;
+}
+#serReq a{
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+#userWelcome h3 {
+	color: #000000;
+	font-weight: bold;
+	font-family: "Verdana", Geneva, sans-serif;
+    /* font-size: 20px; */
+}
+
+/*Home page container */
+.panel-body {
+	padding: 0px;
+}
+
+#goButtonArrow, #refreshButton {
+	margin-left: 0px;
+}
+
+.btn {
+	
+}
+
+#showDBFilesButton {
+	padding-left: 30px;
+}
+
+#backupTabButtonsDiv {
+	padding-left: 0px;
+}
+
+.btn-group {
+	/*left: 440px;*/
+}
+
+#btnGroupFilters {
+	margin-bottom: 10px;
+	
+}
+
+#btnGroupBackUpTab {
+	margin-top: 5%;
+    text-align: center;
+}
+
+#showFileSystem{
+	margin-left: 20px;
+}
+
+#growthTrendDisplay {
+	padding-left: 12px;
+	margin-left: 20px;
+}
+
+#capacityButtonGroup {
+	/*left: 170px;*/
+	text-align: center;
+}
+
+/* .watermark {
+	background-image: url('../img/cg_logo.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: 100% 100%;
+} */
+
+/*---------------------------------------------------*/
+ul {
+	list-style-type: none;
+	padding-left: 20px;
+	li: before{
+     content: "-";
+	display: inline-block;
+	width: 10px;
+}
+
+}
+.collapsed ul {
+	display: none;
+}
+
+li.collapsed:before {
+	content: '+';
+	display: inline-block;
+	width: 10px;
+}
+
+li a:hover {
+	cursor: pointer;
+}
+
+/*---------------------------------*/
+div[data-angular-treeview] {
+	/* prevent user selection */
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	/* default */
+	font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+	font-size: 13px;
+	color: #555;
+	text-decoration: none;
+}
+
+div[data-tree-model] ul {
+	margin: 0px;
+	padding: 5px;
+	list-style: none;
+	border: none;
+	overflow: hidden;
+}
+
+div[data-tree-model] li {
+	position: relative;
+	padding: 0 0 0 12px;
+	line-height: 20px;
+}
+
+div[data-tree-model] li .expanded {
+	padding: 0px 10px;
+	background-image: url("/sissds/img/expand_minus.png");
+	background-size: 12px 15px;
+	background-repeat: no-repeat;
+}
+
+div[data-tree-model] li .collapsed {
+	padding: 0px 10px;
+	background-image: url("/sissds/img/collapse_plus.png");
+	background-size: 12px 15px;
+	background-repeat: no-repeat;
+}
+
+div[data-tree-model] li .normal {
+	padding: 0px 10px;
+	background-image: url("/sissds/img/database.png");
+	background-size: 12px 14px;
+	background-repeat: no-repeat;
+}
+
+div[data-tree-model] li i, div[data-tree-model] li span {
+	cursor: pointer;
+}
+
+div[data-tree-model] li .selected {
+	background-color: #aaddff;
+	font-weight: bold;
+	padding: 1px 5px;
+}
+
+/* Welcome dashboard css*/
+#userFirstName{
+	color: #004d8c;	
+}
+
+*{
+	style="font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;font-style:normal;font-size:12px;white-space:pre-wrap;" 
+}
+
+#userLogOut{
+	color: blue;
+    margin-left: 15px;
+}
+
+.fa-sign-out{
+	margin-left: 5px;
+}
+
+/*------------------------------------*/
+/* #renderView{
+	background: aliceblue;
+} */
+
+#capacity_prediction{
+	margin-bottom: 5%;
+}
+
+.db_total_size_display{
+	margin-left: 9%;
+}
+
+#prediction_label{
+	margin-left: 1%;
+}
+
+.yellowStyle_DBFiles {
+	background-color: #ffff99;
+}
+
+.greenStyle_DBFiles {
+	background-color: #00ffcc;
+}
+
+.redStyle_DBFiles {
+	background-color: #ff9999;
+}
+
+#showDataFilesModal{
+	float: right !important;
+	margin-top: 5%;
+	margin-right: 2%;
+}
+
+#showDataFiles_Modal, #showPentaho_Modal{
+	float: right !important;
+	margin-top: 5%;
+}
+
+#geoName, #clientName, #dbTechName, #dbEnvName, #treeSearch_div, #treeSearch_display, #displayTabsContent, #treeSearch_div input{
+	text-transform: capitalize;
+	font-family: "Verdana", Geneva, sans-serif;
+	font-style:normal;
+	/* -webkit-appearance: none; */
+    -webkit-border-radius: 0px;
+    
+	
+}
+
+#displayTabsContent{
+	border-color: #004d8c;
+}
+
+
+.fa-check-circle{
+	color: #009900;
+}
+
+.fa-times-circle{
+	color: #ff0000;
+}
+
+.fa-cog{
+	color: #ff9900;
+}
+
+#alignCenter{
+	text-align: center;
+}
+#backUpTab, #tdData, #tdLable{
+	text-align: center;
+	color: #000099;
+}
+
+#backUpTab tr th{
+	color: #000099;
+}
+
+#tdLableInfo{
+	text-align: left;
+	color: #000099;
+}
+
+table{
+	font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+}
+
+
+.workInProgress {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: auto;
+  height: auto;
+  background-color: #999;
+}
+.workInProgress * {
+  vertical-align: middle;
+}
+
+#capacity_files_chart{
+	/* width: 100%;
+    height: 100%; */
+    margin: 0 auto;
+}
+
+/* User Logout drop down on welcome block/div*/
+/* Dropdown Button */
+.dropbtn {
+    background-color: #f5f5f5;
+    color: white;
+    /* padding: 16px;
+    font-size: 16px; */
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #f5f5f5;
+}
+
+#myForm table{
+	background: #7bc7de;
+}
+
+#awrrptPDF{
+	text-align: -webkit-center;
+}
+
+#saveAwrRpt{
+	float: right !important;
+}

@@ -1,0 +1,14 @@
+com\iapp\entities\MatchDetails.class
+com\iapp\entities\MatchData.class
+com\iapp\entities\Match.class
+com\iapp\entities\UserDetails.class
+com\iapp\dao\IMatchDetailsDao.class
+com\iapp\entities\MatchStats.class
+com\iapp\dao\MatchDetailsDaoImpl.class
+com\iapp\service\MatchDetailsServiceImpl.class
+com\iapp\entities\ScoreCard.class
+com\iapp\entities\TeamData.class
+com\iapp\controller\UserLoginController.class
+com\iapp\controller\ScoreBoardController.class
+com\iapp\service\IMatchDetailsService.class
+com\iapp\controller\JavaMail.class

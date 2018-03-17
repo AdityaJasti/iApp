@@ -1,0 +1,202 @@
+<!-- <link rel="stylesheet" href="./css/scoreBoard.css"> -->
+
+<div class="container" id="scoreBoard">
+	<div ng-controller="ScoreBoardController" data-ng-init="onPageLoadScoreBoard()">
+		<br />
+		<div class="col-lg-12 col-sm-12 col-md-12 well">
+			<div class="col-lg-3 col-sm-3 col-md-3">
+				<label for="sel1">Select Match (select one):</label>
+				<!-- <select
+					class="form-control" id="schedule">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+				</select>  -->
+				
+				<select id="selectMatch" class="input form-control select"
+					ng-model="selectedMatch" ng-change="selectMatchFilter()">
+					<option selected value="">Select Match</option>
+					<!-- <option ng-repeat="item in matchInfo.matches"
+						value="{{item}}">{{item}}</option> -->
+						
+						<option ng-repeat="(key, value) in matchInfo.matches" value="{{key}}">{{value}}</option>
+					
+				</select>
+
+
+
+
+
+			</div>
+
+			<div class="col-lg-3 col-sm-3 col-md-3">
+				Toss won by
+				<select id="selectTossWinningTeam" class="input form-control select" ng-model="selectTossWinningTeam" data-ng-disabled="checked">
+				
+					<option selected value="">Select Team</option>
+				
+					<option ng-repeat="team in teamsDropDown" value="{{team}}">{{team}}</option>
+					
+				</select>
+			</div>
+			<div class="col-lg-2 col-sm-2 col-md-2">
+				and took 
+				<select class="form-control" id="tossWinningOption" ng-model="selectTossWinningOption" data-ng-disabled="checked">
+				
+					<option selected value="">Select Option</option>
+					<option ng-repeat="tossOption in tossCallOptions" value="{{tossOption}}">{{tossOption}}</option>
+					
+					
+					
+					<!-- <option>Service</option>
+					<option>Court</option>
+					<option>Court and receiving</option> -->
+				</select>
+			</div>
+			
+			<div class="col-lg-2 col-sm-2 col-md-2">
+				<input type="checkbox" data-ng-model="checked" id="walkOverToTeam"> Walkover 
+				<select id="walkOverGivenTeam" class="input form-control select"  data-ng-model="walkOverGivenTo"
+					data-ng-disabled="!checked">
+					<option selected value="">Select Team</option>
+				
+					<option ng-repeat="team in teamsDropDown" value="{{team}}">{{team}}</option>
+
+				</select>
+				
+			</div>
+			<div class="col-lg-2 col-sm-2 col-md-2">
+				<input type="checkbox" data-ng-model="cancelMatch" id="matchCancelled"> Cancel Match 
+				<div ng-if="cancelMatch"><button type="button" class="btn btn-warning" ng-click="matchCancel(selectedMatch)">Cancel Match</button></div>
+				<div ng-if="!checked"><button type="button" class="btn btn-success" id="StartGame" ng-click="startGame(selectedMatch,selectTossWinningTeam,selectTossWinningOption)">Start Game</button></div>
+				<div ng-if="checked"><button type="button" class="btn btn-danger" ng-click="endGameByWalkOver(selectedMatch,walkOverGivenTeam)">End Game</button></div>
+			</div>
+		</div>
+		
+		<!-- Space DIV -->
+		<div></div>
+		<div class="col-lg-12 col-sm-12 col-md-12 well" id="scoreInputWell">
+			<!-- <div class="col-sm-6 col-md-6 well">
+				Team A
+				<div class="input-group">
+					<span class="input-group-btn">
+						<button type="button"
+							class="quantity-left-minus btn btn-danger btn-number"
+							data-type="minus" data-field="">
+							<span class="glyphicon glyphicon-minus"></span>
+						</button>
+					</span> <input type="text" id="quantity" name="quantity"
+						class="form-control input-number" value="0" min="1" max="100">
+					<span class="input-group-btn">
+						<button type="button"
+							class="quantity-right-plus btn btn-success btn-number"
+							data-type="plus" data-field="">
+							<span class="glyphicon glyphicon-plus"></span>
+						</button>
+					</span>
+				</div>
+			</div> -->
+			
+			<table class="table table-bordered">
+			<p>Set Number - <span>{{setNumber}}</span></p>
+				<tbody>
+					<tr>
+						<td>{{teamsListForScoreInputAlpha}}</td>
+						<td><button type="button"
+							class="quantity-left-minus btn btn-danger btn-number"data-type="minus" ng-click="alphaDecrement()" data-field="">
+							<span class="glyphicon glyphicon-minus"></span>
+						</button></td>
+						<td><input type="text" id="setScoreInputA" ng-model="initialScoreForAlpha" name="setScoreInputAlpha" class="form-control input-number" min="1" disabled></td>
+						<td><button type="button" class="quantity-right-plus btn btn-success btn-number" data-type="plus" ng-click="alphaIncrement()" data-field="">
+							<span class="glyphicon glyphicon-plus"></span>
+						</button></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>{{teamsListForScoreInputEcho}}</td>
+						<td><button type="button"
+							class="quantity-left-minus btn btn-danger btn-number" data-type="minus" ng-click="echoDecrement()" data-field="">
+							<span class="glyphicon glyphicon-minus"></span>
+						</button></td>
+						<td><input type="text" id="setScoreInputE" ng-model="initialScoreForEcho" name="setScoreInputEcho" class="form-control input-number" min="1" disabled></td>
+						<td><button type="button"
+							class="quantity-right-plus btn btn-success btn-number" data-type="plus" ng-click="echoIncrement()" data-field="">
+							<span class="glyphicon glyphicon-plus"></span>
+						</button></td>
+						<td></td>
+					</tr>
+					
+					<tr>
+					<td></td>
+					<td></td>
+						<td><button type="button" class="btn btn-info" id="endSet" ng-click="endSet()" disabled>End Set</button></td>
+						<td></td>
+					</tr>
+					
+				</tbody>
+			</table>
+			
+		</div>
+		<!-- Space DIV -->
+		<div></div>
+
+		<div class="col-lg-12 col-sm-12 col-md-12 well"  id="setScoreDisplay">
+		
+		<div><p>Set Number - <span>{{setNumber}}</span> for <span><b>{{forScore}}</b></span></p></div>
+			
+			<div class="col-lg-4 col-sm-4 col-md-4 well">Set Won By - <b>{{setWonByTeam}}</b></div>
+		
+			<div class="col-lg-4 col-sm-4 col-md-4 well">
+			<span>{{teamsListForScoreInputAlpha}}</span>
+			<span>{{initialScoreForAlpha}}</span>
+			</div>
+
+			<div class="col-lg-4 col-sm-4 col-md-4 well">
+			<span>{{teamsListForScoreInputEcho}}</span>
+			<span>{{initialScoreForEcho}}</span>
+			</div>
+			
+			
+			<button type="button" class="btn btn-success" id="endGame" ng-click="gameComplete()" disabled>End Game</button>
+
+			
+			
+		</div>
+		<div></div>
+
+
+		<div class="col-lg-12 col-sm-12 col-md-12 well" id="matchScoreReport">
+
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th></th>
+						<th>{{teamsListForScoreInputAlpha}}</th>
+						<th>{{teamsListForScoreInputEcho}}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Set 1</td>
+						<td>14</td>
+						<td>25</td>
+					</tr>
+					<tr>
+						<td>Set 2</td>
+						<td>25</td>
+						<td>20</td>
+					</tr>
+					<tr>
+						<td>Set 3</td>
+						<td>23</td>
+						<td>25</td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+
+
+
+	</div>
+</div>

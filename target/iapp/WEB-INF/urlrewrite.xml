@@ -1,0 +1,10 @@
+<urlrewrite default-match-type="wildcard">
+	<rule>
+		<from>/Admin</from>
+		<to>/html/home.html</to>
+	</rule>
+	<rule>
+		<from>/ScoreBoard</from>
+		<to>/html/home.html</to>
+	</rule>	
+</urlrewrite>
